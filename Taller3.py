@@ -68,11 +68,12 @@ def menu():
         men = int(input(" Ingrese una opcion por favor "))
 
         if men == 1:
-            print("OPCION 1")
+            print("")
             em.agregarEmpleado()
+            limpiar()
         
         elif men == 2:
-            print("OPCION 2")
+            print("")
             em.mostrarEmpleado()
            
 
