@@ -34,9 +34,19 @@ class Empleado():
         print("")
         time.sleep(0.3)
         input("Presione una tecla para continuar")
-    
 
-    
+    def mostrarEmpleado(self):
+        if len(self.empleados) == 0:
+            print(" -------- Vacio -------- ")
+            print("No hay datos para mostrar")
+            input("Presione una tecla para continuar")
+        
+        else:
+            for i, v in self.empleados.items():
+                print(f"{i}: {v}")
+            time.sleep(0.3)
+            input("Presione una tecla para continuar")
+
 
 def limpiar():
     os.system ("clear")
@@ -63,6 +73,7 @@ def menu():
         
         elif men == 2:
             print("OPCION 2")
+            em.mostrarEmpleado()
            
 
         elif men == 3:
