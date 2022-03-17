@@ -39,13 +39,16 @@ class Empleado():
         if len(self.empleados) == 0:
             print(" -------- Vacio -------- ")
             print("No hay datos para mostrar")
+            print("")
             input("Presione una tecla para continuar")
         
         else:
             for i, v in self.empleados.items():
                 print(f"{i}: {v}")
             time.sleep(0.3)
+            print("")
             input("Presione una tecla para continuar")
+            print("")
 
 
 def limpiar():
@@ -75,10 +78,12 @@ def menu():
         elif men == 2:
             print("")
             em.mostrarEmpleado()
+            limpiar()
            
 
         elif men == 3:
-            print("OPCION 3")
+            print("")
+            limpiar()
 
         elif men == 4:
             print("")
