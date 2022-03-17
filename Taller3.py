@@ -82,8 +82,7 @@ def menu():
            
 
         elif men == 3:
-            print("")
-            limpiar()
+            print("Opcion 3")
 
         elif men == 4:
             print("")
@@ -97,6 +96,7 @@ def menu():
             print("")
             input(" -- Presione una tecla para continuar")
             print("")
+            limpiar()
 
 if __name__ == "__main__":
     menu()
