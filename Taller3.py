@@ -16,6 +16,7 @@ def menu():
         
         elif men == 2:
             print("OPCION 2")
+            print("prueba")
            
 
         elif men == 3:
