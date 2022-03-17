@@ -32,7 +32,7 @@ def menu():
             print(" ----- Intente Nuevamente -----")
             print("")
             print("-- Presione una tecla para continuar")
-
+            print("")
 
 if __name__ == "__main__":
     menu()
