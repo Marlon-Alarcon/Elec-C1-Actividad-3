@@ -1,6 +1,49 @@
+import os, time
+
+class Empleado():
+
+    def __init__(self):
+        self.empleados = {}
+        self.cont = 0
+
+    def agregarEmpleado(self):
+        self.nombre = input("Ingrese el nombre: ")
+        self.apellido = input("Ingrese el apellido: ")
+        self.direccion = input("Ingrese la direccion: ")
+        self.telefono = input("Ingrese el telefono: ")
+        self.sueldo = float (input("Ingrese el sueldo: "))
+        self.alimentacion = 0
+        self.transporte = 0
+
+        if (self.sueldo<2000000):
+            self.alimentacion = 80000
+            self.transporte = 60000
+        
+        self.pension = (self.sueldo * 0.04)
+        self.salud = (self.sueldo * 3.375)/100
+
+        self.devengado = self.alimentacion + self.transporte + self.sueldo
+
+        self.deduccion = (self.sueldo - self.salud - self.pension)
+
+        self.empleados[self.cont] = (self.cont, self.nombre, self.apellido, self.direccion, self.telefono, self.sueldo , self.alimentacion, self.transporte, self.pension, self.salud, self.devengado, self.deduccion)        
+        self.cont = self.cont + 1
+        print("")
+        time.sleep(0.6)
+        print(" ------ Datos Agregados ------ ")
+        print("")
+        time.sleep(0.3)
+        input("Presione una tecla para continuar")
+    
+
+    
+
+def limpiar():
+    os.system ("clear")
 
 def menu():
     men = 0
+    em = Empleado()
     while men != 4:
         print("")
         print("  ╔════════════════════════╗")
@@ -16,6 +59,7 @@ def menu():
 
         if men == 1:
             print("OPCION 1")
+            em.agregarEmpleado()
         
         elif men == 2:
             print("OPCION 2")
