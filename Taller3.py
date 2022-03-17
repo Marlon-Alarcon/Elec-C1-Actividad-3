@@ -3,13 +3,16 @@ def menu():
     men = 0
     while men != 4:
         print("")
-        print("  ----  MENÚ  -----  ")
+        print("  ╔════════════════════════╗")
+        print("  ║    ----  MENÚ  ----    ║")
+        print("  ╚════════════════════════╝")
+        print("  ║ 1. AGREGAR EMPLEADO    ║")
+        print("  ║ 2. MOSTRAR EMPLEADO    ║")
+        print("  ║ 3. ELIMINAR EMPLEADO   ║")
+        print("  ║ 4. Salir               ║")
+        print("  ╚════════════════════════╝")
         print("")
-        print("1. AGREGAR EMPLEADO")
-        print("2. MOSTRAR EMPLEADO")
-        print("3. ELIMINAR EMPLEADO")
-        print("4. Salir")
-        men = int(input("Ingrese una opcion por favor "))
+        men = int(input(" Ingrese una opcion por favor "))
 
         if men == 1:
             print("OPCION 1")
@@ -24,15 +27,15 @@ def menu():
 
         elif men == 4:
             print("")
-            print("-----   Has salido   -----")
-            print("***** Muchas Gracias *****")
+            print(" -----   Has salido   -----")
+            print(" ***** Muchas Gracias *****")
         
         else:
             print("")
             print(" -----  Opcion no valida  -----")
             print(" ----- Intente Nuevamente -----")
             print("")
-            print("-- Presione una tecla para continuar")
+            input(" -- Presione una tecla para continuar")
             print("")
 
 if __name__ == "__main__":
