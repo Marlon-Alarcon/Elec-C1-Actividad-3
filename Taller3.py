@@ -51,6 +51,10 @@ class Empleado():
             input("Presione una tecla para continuar")
             print("")
 
+    def eliminarEmpleado(self):
+        if len(self.empleados) == 0:
+            print("No hay nada que eliminar")
+
     
 
 
