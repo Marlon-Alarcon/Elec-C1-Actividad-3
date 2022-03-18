@@ -4,7 +4,6 @@ class Empleado():
 
     def __init__(self):
         self.empleados = {}
-        self.cont = 0
 
     def agregarEmpleado(self):
         self.codigo = input("Ingrese el id: ")
@@ -28,7 +27,6 @@ class Empleado():
         self.deduccion = (self.sueldo - self.salud - self.pension)
 
         self.empleados[self.codigo] = (self.nombre, self.apellido, self.direccion, self.telefono, self.sueldo , self.alimentacion, self.transporte, self.pension, self.salud, self.devengado, self.deduccion)        
-        #self.cont = self.cont + 1
         print("")
         time.sleep(0.6)
         print(" ------ Datos Agregados ------ ")
@@ -63,8 +61,6 @@ class Empleado():
 
     
 
-
-               
 
 def limpiar():
     os.system ("clear")
