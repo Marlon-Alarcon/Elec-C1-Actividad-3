@@ -98,6 +98,7 @@ def menu():
 
         elif men == 3:
             print("Opcion 3")
+            em.eliminarEmpleado()
             
 
         elif men == 4:
