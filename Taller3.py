@@ -7,7 +7,7 @@ class Empleado():
         self.cont = 0
 
     def agregarEmpleado(self):
-        self.codigo = input("Ingrese el codigo: ")
+        self.codigo = input("Ingrese el id: ")
         self.nombre = input("Ingrese el nombre: ")
         self.apellido = input("Ingrese el apellido: ")
         self.direccion = input("Ingrese la direccion: ")
@@ -99,7 +99,7 @@ def menu():
         elif men == 3:
             print("Opcion 3")
             em.eliminarEmpleado()
-            
+
             
 
         elif men == 4:
