@@ -7,6 +7,7 @@ class Empleado():
         self.cont = 0
 
     def agregarEmpleado(self):
+        self.codigo = input("Ingrese el id: ")
         self.nombre = input("Ingrese el nombre: ")
         self.apellido = input("Ingrese el apellido: ")
         self.direccion = input("Ingrese la direccion: ")
@@ -26,8 +27,8 @@ class Empleado():
 
         self.deduccion = (self.sueldo - self.salud - self.pension)
 
-        self.empleados[self.cont] = (self.cont, self.nombre, self.apellido, self.direccion, self.telefono, self.sueldo , self.alimentacion, self.transporte, self.pension, self.salud, self.devengado, self.deduccion)        
-        self.cont = self.cont + 1
+        self.empleados[self.codigo] = (self.nombre, self.apellido, self.direccion, self.telefono, self.sueldo , self.alimentacion, self.transporte, self.pension, self.salud, self.devengado, self.deduccion)        
+        #self.cont = self.cont + 1
         print("")
         time.sleep(0.6)
         print(" ------ Datos Agregados ------ ")
@@ -50,6 +51,20 @@ class Empleado():
             input("Presione una tecla para continuar")
             print("")
 
+    def eliminarEmpleado(self):
+        if len(self.empleados) == 0:
+            print("No hay nada que eliminar")
+        else:
+            self.eliminar = input("Ingrese el id del empleado a eliminar: ")
+            if (self.eliminar in self.empleados):
+                print(f"Se eliminó {self.empleados.pop(self.eliminar)}")
+            else:
+                print("Este id no existe")
+
+    
+
+
+               
 
 def limpiar():
     os.system ("clear")
@@ -83,6 +98,9 @@ def menu():
 
         elif men == 3:
             print("Opcion 3")
+            em.eliminarEmpleado()
+
+            
 
         elif men == 4:
             print("")
